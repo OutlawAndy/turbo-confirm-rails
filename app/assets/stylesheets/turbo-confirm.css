@@ -30,7 +30,7 @@
 }
 
 /* stylelint-disable no-descending-specificity */
-.confirm-dialog {
+.turbo-confirm--dialog {
   --_op-confirm-dialog-width: calc(100 * var(--op-size-unit)); /* 400px */
 
   z-index: var(--op-z-index-dialog-content);
@@ -43,22 +43,22 @@
   inline-size: var(--_op-confirm-dialog-width);
   line-height: var(--op-line-height-base);
 
-  .confirm-dialog__header,
-  .confirm-dialog__body,
-  .confirm-dialog__footer {
+  .turbo-confirm--dialog__header,
+  .turbo-confirm--dialog__body,
+  .turbo-confirm--dialog__footer {
     padding: var(--op-space-medium);
   }
 
-  .confirm-dialog__header {
+  .turbo-confirm--dialog__header {
     /* font-size: var(--op-font-large); */
     font-weight: 600;
   }
 
-  .confirm-dialog__body {
+  .turbo-confirm--dialog__body {
     box-shadow: var(--op-border-all) var(--op-color-border);
   }
 
-  .confirm-dialog__footer {
+  .turbo-confirm--dialog__footer {
     display: flex;
     align-items: center;
     justify-content: space-between;

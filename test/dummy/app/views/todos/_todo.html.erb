@@ -1,0 +1,11 @@
+<div id="<%= dom_id todo %>">
+  <p>
+    <strong>Name:</strong>
+    <%= todo.name %>
+  </p>
+
+  <p>
+    <%= button_to 'Delete', todo, method: :delete, data: { turbo_confirm: 'Are you sure' } %>
+  </p>
+
+</div>

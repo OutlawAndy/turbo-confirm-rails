@@ -1,9 +1,9 @@
-say "Create controllers directory"
-empty_directory "app/javascript/controllers"
-copy_file "#{__dir__}/app/javascript/controllers/index_for_node.js",
-  "app/javascript/controllers/index.js"
-copy_file "#{__dir__}/app/javascript/controllers/application.js",
-  "app/javascript/controllers/application.js"
+say "Create Turbo Confirm Initializer"
+empty_directory "app/javascript/initializers"
+copy_file "#{__dir__}/app/javascript/initializers/turbo_confirm.js",
+  "app/javascript/initializers/turbo_confirm.js"
+
+
 
 if (Rails.root.join("app/javascript/application.js")).exist?
   say "Import Turbo Confirm Initializer in app/javascript/application.js"
