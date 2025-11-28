@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+VERSION=$1
+
+printf "module Turbo\n  module Confirm\n    VERSION = \"$VERSION\"\n  end\nend\n" > ./lib/turbo/confirm/version.rb
+bundle
+git add Gemfile.lock lib/turbo/confirm/version.rb
+git commit -m "Bump version for $VERSION"
+git push
+git tag v$VERSION
+git push --tags
+gem build turbo-confirm.gemspec
+gem push "turbo-rails-$VERSION.gem" --host https://rubygems.org

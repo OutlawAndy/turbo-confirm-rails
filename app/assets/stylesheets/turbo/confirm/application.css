@@ -1,0 +1,67 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+:root {
+  --op-size-unit: 0.4rem;
+  --op-space-scale-unit: 1rem;
+  --op-z-index-dialog: 800;
+  --op-z-index-dialog-backdrop: 801;
+  --op-z-index-dialog-content: 802;
+  --op-radius-medium: 4px;
+  --op-border-width: 1px;
+  --op-border-all: 0 0 0 var(--op-border-width);
+  --op-color-border: rgba(0, 0, 0, 0.12);
+  --op-color-on-background: #212121;
+  --op-line-height-base: 1.5;
+  --op-space-medium: calc(var(--op-space-scale-unit) * 1.6); /* 16px */
+}
+
+/* stylelint-disable no-descending-specificity */
+.confirm-dialog {
+  --_op-confirm-dialog-width: calc(100 * var(--op-size-unit)); /* 400px */
+
+  z-index: var(--op-z-index-dialog-content);
+  border-radius: var(--op-radius-medium);
+  background-color: white;
+  box-shadow: var(--op-border-all) var(--op-color-border);
+  color: var(--op-color-on-background);
+  contain: paint;
+  font-size: var(--op-font-medium);
+  inline-size: var(--_op-confirm-dialog-width);
+  line-height: var(--op-line-height-base);
+
+  .confirm-dialog__header,
+  .confirm-dialog__body,
+  .confirm-dialog__footer {
+    padding: var(--op-space-medium);
+  }
+
+  .confirm-dialog__header {
+    /* font-size: var(--op-font-large); */
+    font-weight: 600;
+  }
+
+  .confirm-dialog__body {
+    box-shadow: var(--op-border-all) var(--op-color-border);
+  }
+
+  .confirm-dialog__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+/* stylelint-enable no-descending-specificity */
