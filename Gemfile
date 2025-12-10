@@ -3,6 +3,8 @@ source "https://rubygems.org"
 # Specify your gem's dependencies in turbo-confirm.gemspec.
 gemspec
 
+gem "importmap-rails"
+
 gem "puma"
 
 gem "sqlite3"
